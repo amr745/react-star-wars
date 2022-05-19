@@ -1,4 +1,5 @@
 import {useState, useEffect} from "react";
+import "./App.css"
 
 function App() {
 
@@ -16,18 +17,21 @@ function App() {
 
   const allStarships = starship.map((ship, index) => {
     return (
-      <div key={index}>
-        {ship.name}
+      <div className="container" key={index}>
+        <div className="">{ship.name}</div>
       </div>
     )
   })
 
   return (
     <div className="App">
-      <h1>STAR WARS STARSHIPS</h1>
+      <h1>Star Wars Starships</h1>
       <section>
-        {allStarships}
+      <div className="">
+        <div className="ships">{allStarships}</div>
+        </div>
       </section>
+      
     </div>
   );
 }
